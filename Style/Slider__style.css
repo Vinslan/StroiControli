@@ -1,0 +1,115 @@
+.slider {
+  position: relative;
+  width: 614px;
+  height: 516px;
+  margin: 50px auto 0;
+  /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+  user-select: none;
+  /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+  touch-action: pan-y;
+  background-color: #F6F8F9;
+  padding: 60px 92px 56px 87px;
+  border-radius: 5px;
+  margin-right: -110px;
+  margin-top: 0;
+}
+
+/* Если где-то внутри слайдера будут изображения,
+то нужно задать им pointer-events: none,
+чтобы они не перетаскивались мышью */
+
+.slider img {
+  poiner-events: none;
+}
+
+.slider-list {
+  width: 481px;
+  height: 415px;
+  overflow: hidden;
+}
+
+.slider-list.grab {
+  cursor: grab;
+}
+
+.slider-list.grabbing{
+  cursor: grabbing;
+}
+
+.slider-track {
+  display: flex;
+}
+
+.slide {
+  width: 481px;
+  height: 415px;
+  /* Чтобы слайды не сжимались */
+  flex-shrink: 0;
+  /* Увеличиваем и центрируем цифру внутри слайда */
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.slider-arrows {
+  margin-top: -65px;
+  text-align: start;
+  position: absolute;
+}
+
+.next,
+.prev {
+  z-index: 20;
+  background: none;
+  border: none;
+  margin: 0 0px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.next.disabled,
+.prev.disabled {
+  opacity: .25;
+  pointer-events: none;
+}
+
+
+.slide{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    z-index: 1;
+}
+
+.slide h2{
+  font-size: 30px;
+  width: 435px;
+}
+
+.user__name h4{
+  font-size: 16px;
+  color: #212B31;
+}
+
+.user__name p{
+  font-size: 16px;
+  color: #72787D;
+}
+
+.slide__user{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.slide__user img{
+  margin-left: 1px;
+}
+
+.slider-arrows button{
+  color: #036FC7;
+}

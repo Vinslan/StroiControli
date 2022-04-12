@@ -1,0 +1,151 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+h1,h2,h3,h4,p,a{
+  font-family: "Inter",sans-serif;
+  font-weight: 400;
+}
+
+
+
+h1,h2,h3{
+  color: #212B31;
+}
+
+.container{
+  width: 1056px;
+  margin: 0 auto;
+}
+
+.Htext{
+  
+}
+
+.Htext h2{
+  font-size: 32px;
+  line-height: 48px;
+}
+
+
+
+.Htext p{
+  font-size: 20px;
+  line-height: 32px;
+  color: #72787D;
+}
+
+
+.textIn h3{
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.textIn p{
+  font-size: 16px;
+  line-height: 24px;
+  color: #72787D;
+}
+
+
+.buttons{
+  margin: 30px 0 88px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+} 
+
+.buttons a:first-child{
+  padding: 13px 25px;
+  background-color: #212B31;
+  border-radius: 4px;
+
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+.buttons a:last-child{
+  padding: 13px 25px;
+  background-color: #ffffff;
+  border: 1px solid #DADEDF;
+  border-radius: 4px;
+
+  font-family: "Inter",sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #212B31;
+}
